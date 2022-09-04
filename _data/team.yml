@@ -1,0 +1,24 @@
+organizers:
+  - name: Kimberly McGuire
+    affiliation: Bitcraze A.B.
+  - name: Giuseppe Silano
+    affiliation: RSE S.p.A. and CTU Prague
+  - name: Chiara Gabellieri
+    affiliation: TU Twente
+  - name: Wolfgang Hönig
+#    email: hoenig (at) tu-berlin (dot) de
+#    website: https://whoenig.github.io/
+    affiliation: TU Berlin
+    image: wolfgang_hoenig.jpg
+
+steering:
+  - name: Antonio Franchi
+    affiliation: TU Twente
+  - name: Martin Saska
+    affiliation: Czech Technical University in Prague
+  - name: Gianluca Antonelli
+    affiliation: University of Cassino and Southern Lazio
+  - name: Vincenzo Lippiello
+    affiliation: University of Naples Federico II
+  - name: Gaurav Sukhatme
+    affiliation: University of Southern California

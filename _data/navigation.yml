@@ -1,0 +1,6 @@
+- name: About
+  link: /
+  icon: fa-solid fa-info
+- name: Team
+  link: "#team"
+  icon: fa-solid fa-people-group
