@@ -1,6 +1,9 @@
 - name: About
   link: /
   icon: fa-solid fa-info
+- name: Dates
+  link: "#dates"
+  icon: fa-solid fa-calendar-days
 - name: Team
   link: "#team"
   icon: fa-solid fa-people-group
