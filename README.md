@@ -18,6 +18,14 @@ jekyll serve
 
 And go to `http://localhost:4000` in your browser. The page will automatically update, unless `_config.yml` is changed (in which case you have to restart jekyll).
 
+## Docker for Jekyll
+
+As an alternative, you can also use docker to build the website in a Jekyll container
+
+```
+docker-compose up
+```
+
 ## Deployment
 
 Simply push to the main branch. The site will be deployed automatically.
