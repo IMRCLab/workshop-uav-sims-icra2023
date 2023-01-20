@@ -4,6 +4,12 @@
 - name: Dates
   link: "#dates"
   icon: fa-solid fa-calendar-days
+- name: Call for papers
+  link: "#CFP"
+  icon: fa-solid fa-bullhorn
+- name: Invited speakers
+  link: "#speakers"
+  icon: fa-solid fa-microphone
 - name: Team
   link: "#team"
   icon: fa-solid fa-people-group
