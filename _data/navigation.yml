@@ -18,7 +18,7 @@
   icon: fa-solid fa-people-group
 - name: Support
   link: "#support"
-  icon: fa-solid fa-quotes
+  icon: fa-solid fa-quote-left
 - name: Endorsement
   link: "#endorsement"
   icon: fa-solid fa-ad
