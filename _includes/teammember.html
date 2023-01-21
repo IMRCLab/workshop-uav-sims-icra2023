@@ -14,9 +14,9 @@
         <p class="venue">
           {{member.affiliation}}
         </p>
-        {% if member.note %}
-        <p class="note">
-           {{ member.note | newline_to_br}}
+        {% if member.talk %}
+        <p class="talk">
+           <b>Talk:</b> "{{ member.talk | newline_to_br}}"
         </p>
         {% endif %}
       </div>
