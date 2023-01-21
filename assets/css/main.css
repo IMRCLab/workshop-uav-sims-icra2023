@@ -98,6 +98,17 @@ width: auto;
 height: auto;
 }
 
+.myimg img {
+  /* display: block;
+  max-height:200px;
+  width: auto;
+  height: auto; */
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
 /* ######################### */
 
 .is-flex-wrap {

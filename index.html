@@ -23,6 +23,8 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
       <div class="column is-half is-4-desktop">
 
         <div class="content paper">
+
+          <!--
           <h2 class="subtitle is-6">News</h2>
 
           <ul>
@@ -39,19 +41,56 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
               <span class="note">23/09/2022</span>
             </li>
           </ul>
+          -->
+
+          <h2 class="subtitle is-6">Important Dates</h2>
+
+          <ul>
+            <li>
+              <span class="title">Extended abstract submission deadline: <p style="color:red;display:inline">March 20, 2023.</p>
+              </span>
+            </li>
+            <li>
+              Notification to authors: April 10, 2023
+            </li>
+            <li>
+              Camera-ready paper: April 17, 2023
+            </li>
+            <li>
+              <span class="title"<b>Workshop day: June 2, 2023. Last day of ICRA'23. Half-day workshop.</b></span>
+            </li>
+          </ul>
 
         </div>
+
+        <p class="buttons">
+          <a href="mailto:rs4uavs@googlegroups.com" class="button is-dark">
+            <span class="icon">
+              <i class="fas fa-at"></i>
+            </span>
+            <span>E-Mail</span>
+          </a>
+        </p>
+
+        <a href="https://easychair.org/conferences/?conf=rs4uavs" class="button is-dark">
+          <span class="icon">
+            <i class="fas fa-file-export"></i>
+          </span>
+          <span>Submission</span>
+        </a>
         
+        <!--
         <div class="content paper">
           <h2 class="subtitle is-6">Questions</h2>
             If you have any questions please <a href="mailto: rs4uavs@googlegroups.com">contact us</a>.
         </div>
+        -->
 
       </div>
     </div>
 </section>
 
-
+<!--
 <section class="section" id="dates">
   <div class="section-heading">
       <h2 class="title is-2">Important Dates</h2>
@@ -77,6 +116,7 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
     </div>
   </div>
 </section>
+-->
 
 <section class="section" id="CFP">
   <div class="section-heading">
@@ -92,7 +132,7 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
         <li>Every paper will be reviewed by at least two peers. The selection of accepted papers will be done by the organizing committee, based on
           the reviews.</li>
       </ul>
-      <center><h3><a href="https://easychair.org/conferences/?conf=rs4uavs">Submission website (EasyChair)</a></h3></center>
+      <!-- <center><h3><a href="https://easychair.org/conferences/?conf=rs4uavs">Submission website (EasyChair)</a></h3></center> -->
     </div>
   </div>
 
@@ -140,8 +180,37 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
       </ul>
     </div>
   </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Invited Speakers</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>TBD</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Plans to encourage interaction among participants</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      A set of actions are planned to solicit broad and active participation in the workshop, including:
+      <ul>
+        <li>Discussion poster of contributed abstracts</li>
+        <li>Creation of online pools among both in person and remote participants to identify top discussions themes during round tables and breaks</li>
+        <li>Breakout sessions and a round table (i.e., presentation session followed by an open discussion) with the speakers and the participants</li>
+      </ul>
+    </div>
+  </div>
+
 </section>
 
+<!--
 <section class="section" id="speakers">
   <div class="section-heading">
     <h2 class="title is-2">Invited Speakers</h2>
@@ -153,6 +222,7 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
       </ul>
     </div>
   </div>
+  -->
 <!--div class="container">
   <div class="team tile is-ancestor is-flex-wrap">
       {% for member in site.data.speakers %}
@@ -160,8 +230,9 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
       {%- endfor %}
   </div>
 </div-->
-</section>
-
+<!-- 
+</section> -->
+<!-- 
 <section class="section" id="plan-participants">
   <div class="section-heading">
     <h2 class="title is-2">Plans to encourage interaction among participants</h2>
@@ -177,7 +248,7 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
         </ul>
       </div>
     </div>
-</section>
+</section> -->
 
 
 <section class="section" id="team">
@@ -208,14 +279,20 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
           {%- endfor %}
       </div>
   </div>
-</section>
 
-<section class="section" id="support">
   <div class="section-heading">
-      <h2 class="title is-2">Support</h2>
+      <h2 class="title is-3">Support</h2>
   </div>
 
-  <div class="columns is-centered">
+  <div class="container">
+    <div class="team tile is-ancestor is-flex-wrap">
+        {% for member in site.data.team.support %}
+            {% include imgcard.html %}
+        {%- endfor %}
+    </div>
+  </div>
+
+  <!-- <div class="columns is-centered">
     <div class="content paper">
       <center>
       <ul>
@@ -237,13 +314,20 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
       </ul>
       </center>
     </div>
-  </div>
-</section>
+  </div> -->
 
-<section class="section" id="endorsement">
   <div class="section-heading">
-      <h2 class="title is-2">Endorsement</h2>
+      <h2 class="title is-3">Endorsement</h2>
   </div>
+
+  <div class="container">
+    <div class="team tile is-ancestor is-flex-wrap">
+        {% for member in site.data.team.endorsement %}
+            {% include imgcard.html %}
+        {%- endfor %}
+    </div>
+  </div>
+<!-- 
 
   <div class="columns is-centered">
     <div class="content paper">
@@ -253,5 +337,5 @@ title: The Role of Robotics Simulators for Unmanned Aerial Vehicles
         </a>
       </center>
     </div>
-  </div>
+  </div> -->
 </section>

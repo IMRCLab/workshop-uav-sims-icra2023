@@ -33,3 +33,25 @@ steering:
   - name: Stefano Stramigioli
     affiliation: TU Twente
     image: stefano_stramigioli.png
+
+support:
+  - name: Aerial Core
+    url: https://aerial-core.eu
+    image: projects_logo/aerial-core_logo2.png
+  - name: Comp4Drones
+    url: https://www.comp4drones.eu
+    image: projects_logo/LogoC4D.png
+  - name: AeroSTREAM
+    url: https://aerostream.fer.hr/aerostream
+    image: projects_logo/aeroSTREAM.png
+  - name: FlyFlic
+    url: https://www.ram.eemcs.utwente.nl/research/projects/flyflic
+    image: projects_logo/Fliflic_logo.png
+  - name: German Research Foundation
+    url: https://www.dfg.de/en/
+    image: projects_logo/german_research_foundation.png
+
+endorsement:
+  - name: ARUAV TC
+    url: https://ieee-aerialrobotics-uavs.org/
+    image: projects_logo/technical_committee_aruav.jpeg
