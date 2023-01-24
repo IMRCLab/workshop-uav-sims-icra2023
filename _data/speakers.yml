@@ -10,9 +10,11 @@
 - name: Tomáš Báča
   affiliation:  Czech Technical University in Prague
   image: tomas_baca.jpg
-  talk:
+  talk: Abstractions and Simulations as the Backbone of Reproducible Research
 - name: Sakshi Mishra
+  image: Microsoft Project AirSim for Unmanned Aerial Vehicles
   affiliation: Microsoft
 - name: Praveen Palanisamy
   affiliation: Microsoft
-  talk:
+  image: 
+  talk: Microsoft Project AirSim for Unmanned Aerial Vehicles
