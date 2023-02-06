@@ -6,13 +6,13 @@
 - name: Angela Schölig
   affiliation: Technical University of Zürich
   image: angela3.jpg
-  talk:
+  talk: TBD
 - name: Tomáš Báča
   affiliation:  Czech Technical University in Prague
   image: tomas_baca.jpg
   talk: Abstractions and Simulations as the Backbone of Reproducible Research
 - name: Sakshi Mishra
-  image: Sakshi-Headshot-ICRA23
+  image: Sakshi-Headshot-ICRA23.jpg
   affiliation: Microsoft
   talk: Microsoft Project AirSim for Unmanned Aerial Vehicles
 - name: Praveen Palanisamy
