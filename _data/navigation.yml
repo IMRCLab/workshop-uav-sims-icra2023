@@ -1,18 +1,18 @@
 - name: About
   link: /
   icon: fa-solid fa-info
-# - name: Dates
-  # link: "#dates"
-  # icon: fa-solid fa-calendar-days
+- name: Important Dates
+  link: "#dates"
+  icon: fa-solid fa-calendar-days
 - name: Call for papers
   link: "#CFP"
   icon: fa-solid fa-bullhorn
 - name: Schedule
   link: "#schedule"
   icon: fa-solid fa-calendar-days
-# - name: Invited speakers
-  # link: "#speakers"
-  # icon: fa-solid fa-microphone
+- name: Invited speakers
+  link: "#speakers"
+  icon: fa-solid fa-microphone
 # - name: Participants
   # link: "#plan-participants"
   # icon: fa-solid fa-comments
