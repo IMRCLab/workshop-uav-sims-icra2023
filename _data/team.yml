@@ -50,6 +50,12 @@ support:
   - name: German Research Foundation
     url: https://www.dfg.de/en/
     image: projects_logo/german_research_foundation.png
+  - name: Bitcraze AB
+    url: https://www.bitcraze.io/
+    image: projects_logo/Bitcraze_logo.png
+  - name: DroneCode Foundation
+    url: https://www.dronecode.org/
+    image: projects_logo/dronecode_logo_default.png
 
 endorsement:
   - name: ARUAV TC
