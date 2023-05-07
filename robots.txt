@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /_papers/
+Disallow: /_posters/
