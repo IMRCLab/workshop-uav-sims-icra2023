@@ -1,5 +1,5 @@
 # workshop-uav-sims-icra2023
-Webpage for the workshop on "The Role of Robotics Simulators for Unmanned Aerial Vehicles" (proposed for ICRA 2023)
+Webpage for the workshop on "The Role of Robotics Simulators for Unmanned Aerial Vehicles" (hosted at ICRA 2023)
 
 The webpage uses the static site generator [Jekyll](https://jekyllrb.com/) with a custom theme based on the CSS framework [Bulma](https://bulma.io/).
 on github using [jekyll-action](https://github.com/helaili/jekyll-action).
