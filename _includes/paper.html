@@ -1,0 +1,17 @@
+<li>
+  <span class="title">
+    {{ paper.title }},
+  </span>
+  <span class="author">
+    {{ paper.authors }}
+  <br>
+  [
+  {% if paper.pdf %}
+  <a href="papers/{{paper.pdf}}"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  {% endif %}
+  {% if paper.poster %}
+  <a href="papers/{{paper.poster}}"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  {% endif %}
+
+  ]
+</li>

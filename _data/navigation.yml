@@ -4,15 +4,18 @@
 - name: Important Dates
   link: "#dates"
   icon: fa-solid fa-calendar-days
-- name: Call for papers
-  link: "#CFP"
-  icon: fa-solid fa-bullhorn
+# - name: Call for papers
+#   link: "#CFP"
+#   icon: fa-solid fa-bullhorn
 - name: Schedule
   link: "#schedule"
   icon: fa-solid fa-calendar-days
 - name: Invited speakers
   link: "#speakers"
   icon: fa-solid fa-microphone
+- name: Papers
+  link: "#papers"
+  icon: fa-solid fa-book
 # - name: Participants
   # link: "#plan-participants"
   # icon: fa-solid fa-comments

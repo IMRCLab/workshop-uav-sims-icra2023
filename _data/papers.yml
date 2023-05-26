@@ -1,0 +1,52 @@
+- title: "Enhancing Power Line Segmentation for UAV Inspection utilizing Synthetic Data"
+  authors: "Georgios Kalitsios, Vasileios Mygdalis and Ioannis Pitas"
+  pdf:  "RS4UAVs_paper_2.pdf"
+- title: "RotorPy: A Python-based Multirotor Simulator with Aerodynamics for Education and Research"
+  authors: "Spencer Folk, James Paulos and Vijay Kumar"
+  pdf:  RS4UAVs_paper_3.pdf
+- title: "MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs"
+  authors: "Fanze Kong, Xiyuan Liu, Benxu Tang, Jiarong Lin, Yunfan Ren, Yixi Cai, Fangcheng Zhu, Nan Chen and Fu Zhang"
+  pdf:  RS4UAVs_paper_4.pdf
+  poster: RS4UAVs_poster_4.pdf
+- title: "Sensitivity Approach for Prioritizing Unmanned Aerial Vehicles Simulator Design"
+  authors: "Mohamad Chehadeh, Igor Boiko and Yahya Zweiri"
+  pdf:  RS4UAVs_paper_5.pdf
+- title: "Flymation: Interactive Animation for Flying Robots"
+  authors: "Yunlong Song and Davide Scaramuzza"
+  pdf:  RS4UAVs_paper_6.pdf
+- title: "Introducing Noise for AirSim's 3D Lidar Sensor to Reduce the Sim2real Gap"
+  authors: "David Tejero, Marco A. Montes-Grova, Jose A. Alvarez, Francisco J. Perez-Grau and Antidio Viguria"
+  pdf:  RS4UAVs_paper_7.pdf
+- title: "Potato: A Data-Oriented Programming 3D Simulator for Large-Scale Heterogeneous Swarm Robotics"
+  authors: "Jinjie Li, Liang Han, Haoyang Yu, Zhaotian Wang, Pengzhi Yang, Ziwei Yan and Zhang Ren"
+  pdf:  RS4UAVs_paper_8.pdf
+- title: "From Perspective View to Bird's Eye View in Agricultural Environments"
+  authors: "Simon Rumley, Anastasia Thoma, Paul Beardsley, Lucas Teixeira and Margarita Chli"
+  pdf:  RS4UAVs_paper_9.pdf
+- title: "Survey, Selection, and Integration of Aerial Vehicle Simulators"
+  authors: "Cora Dimmig and Marin Kobilarov"
+  pdf:  RS4UAVs_paper_10.pdf
+- title: "CrazyChoir: A ROS 2 Toolbox for Simulations and Experiments on Swarms of Cooperating Crazyflies"
+  authors: "Lorenzo Pichierri, Andrea Testa and Giuseppe Notarstefano"
+  pdf:  RS4UAVs_paper_11.pdf
+- title: "Aerial Gym – Isaac Gym Simulator for Aerial Robots"
+  authors: "Mihir Kulkarni, Theodor Johannes Line Forgaard and Kostas Alexis"
+  pdf:  RS4UAVs_paper_12.pdf
+- title: "Simulation-Guided Testing for Autonomous Aerial Robotics Applications"
+  authors: "Rafael Perez-Segui, Pedro Arias-Perez, Javier Melero-Deza, David Perez-Saura, Miguel Fernandez-Cortizas and Pascual Campoy"
+  pdf:  RS4UAVs_paper_13.pdf
+  poster: RS4UAVs_poster_13.pdf
+- title: "Sim-to-real transfer of UAV swarms using digital twins"
+  authors: "Lucio Salinas, Georgios Tzoumas, Lenka Pitonakova and Sabine Hauert"
+  pdf:  RS4UAVs_paper_15.pdf
+- title: "QuadSwarm: A Modular Multi-Quadrotor Simulator for Deep Reinforcement Learning with Direct Thrust Control"
+  authors: "Zhehui Huang, Sumeet Batra, Tao Chen, Rahul Krupani, Tushar Kumar, Artem Molchanov, Aleksei Petrenko, James Preiss, Zhaojing Yang and Gaurav Sukhatme"
+  pdf:  RS4UAVs_paper_16.pdf
+  poster: RS4UAVs_poster_16.pdf
+- title: "Unity3D and Robot Operating System applied to the development of a multi-UAV strategy to identify oil spills around offshore platforms"
+  authors: "Kelen Vivaldini and Tatiana Pazelli"
+  pdf:  RS4UAVs_paper_17.pdf
+  poster: RS4UAVs_poster_17.pdf
+- title: "A Simulator for Fully-Actuated UAVs"
+  authors: "Azarakhsh Keipour, Mohammadreza Mousaei and Sebastian Scherer"
+  pdf:  RS4UAVs_paper_18.pdf
