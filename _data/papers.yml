@@ -20,12 +20,14 @@
 - title: "Potato: A Data-Oriented Programming 3D Simulator for Large-Scale Heterogeneous Swarm Robotics"
   authors: "Jinjie Li, Liang Han, Haoyang Yu, Zhaotian Wang, Pengzhi Yang, Ziwei Yan and Zhang Ren"
   pdf:  RS4UAVs_paper_8.pdf
+  poster: RS4UAVs_poster_8.pdf
 - title: "From Perspective View to Bird's Eye View in Agricultural Environments"
   authors: "Simon Rumley, Anastasia Thoma, Paul Beardsley, Lucas Teixeira and Margarita Chli"
   pdf:  RS4UAVs_paper_9.pdf
 - title: "Survey, Selection, and Integration of Aerial Vehicle Simulators"
   authors: "Cora Dimmig and Marin Kobilarov"
   pdf:  RS4UAVs_paper_10.pdf
+  poster:  RS4UAVs_poster_10.pdf
 - title: "CrazyChoir: A ROS 2 Toolbox for Simulations and Experiments on Swarms of Cooperating Crazyflies"
   authors: "Lorenzo Pichierri, Andrea Testa and Giuseppe Notarstefano"
   pdf:  RS4UAVs_paper_11.pdf
