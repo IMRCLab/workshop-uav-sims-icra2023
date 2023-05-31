@@ -24,7 +24,7 @@
 
 - name: Flightmare
   url: https://uzh-rpg.github.io/flightmare/
-  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+  notes: See also invited talk by Davide Scaramuzza; See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
 
 - name: Gazebo
   url: https://gazebosim.org
@@ -32,7 +32,7 @@
 
 - name: Gym-PyBullet-Drones
   url: https://utiasdsl.github.io/gym-pybullet-drones/
-  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+  notes: See also invited talk by Angela Schoellig; See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
 
 - name: MARSIM
   url: https://github.com/hku-mars/MARSIM
