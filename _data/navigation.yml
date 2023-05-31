@@ -1,9 +1,9 @@
 - name: About
   link: /
   icon: fa-solid fa-info
-- name: Important Dates
-  link: "#dates"
-  icon: fa-solid fa-calendar-days
+# - name: Important Dates
+#   link: "#dates"
+#   icon: fa-solid fa-calendar-days
 # - name: Call for papers
 #   link: "#CFP"
 #   icon: fa-solid fa-bullhorn
@@ -16,6 +16,9 @@
 - name: Papers
   link: "#papers"
   icon: fa-solid fa-book
+- name: Simulators
+  link: "#sims"
+  icon: fa-solid fa-laptop-code
 # - name: Participants
   # link: "#plan-participants"
   # icon: fa-solid fa-comments
