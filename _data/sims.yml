@@ -1,0 +1,59 @@
+- name: Aerial Gym
+  url: https://github.com/ntnu-arl/aerial_gym_simulator
+  notes: Based on NVIDIA Isaac Gym; See also <a href="papers/RS4UAVs_paper_12.pdf">paper 12</a>
+
+- name: Aerostack2
+  url: https://github.com/aerostack2/aerostack2
+  notes: See also <a href="papers/RS4UAVs_paper_13.pdf">paper 13</a>
+
+- name: AirSim
+  url: https://microsoft.github.io/AirSim/
+  notes: based on Unreal Engine; <a href="papers/RS4UAVs_paper_7.pdf">paper 7</a>
+
+- name: ARCAD
+  url: https://github.com/keipour/aircraft-simulator-matlab
+  notes: See also <a href="papers/RS4UAVs_paper_18.pdf">paper 18</a>
+
+- name: FlightGoggles
+  url: https://flightgoggles.mit.edu/
+  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+
+- name: Flightmare
+  url: https://uzh-rpg.github.io/flightmare/
+  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+
+- name: Gazebo
+  url: https://gazebosim.org
+  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+
+- name: Gym-PyBullet-Drones
+  url: https://utiasdsl.github.io/gym-pybullet-drones/
+  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+
+- name: MARSIM
+  url: https://github.com/hku-mars/MARSIM
+  notes: See also <a href="papers/RS4UAVs_paper_4.pdf">paper 4</a>
+
+- name: Potato
+  url:
+  notes: GPU-based; See also <a href="papers/RS4UAVs_paper_8.pdf">paper 8</a>
+
+- name: QuadSwarm
+  url: https://github.com/Zhehui-Huang/quad-swarm-rl
+  notes: See also <a href="papers/RS4UAVs_paper_16.pdf">paper 16</a>
+
+- name: RotorPy
+  url: https://github.com/spencerfolk/rotorpy
+  notes: See also <a href="papers/RS4UAVs_paper_3.pdf">paper 3</a>
+
+- name: RotorS
+  url: https://github.com/ethz-asl/rotors_simulator
+  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+
+- name: Unity 3D
+  url: https://unity.com/Paper 4
+  notes: See also <a href="papers/RS4UAVs_paper_2.pdf">paper 2</a>, <a href="papers/RS4UAVs_paper_17.pdf">paper 17</a>
+
+- name: Webots
+  url: https://cyberbotics.com/
+  notes: See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
