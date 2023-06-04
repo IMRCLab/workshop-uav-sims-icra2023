@@ -17,6 +17,10 @@
 - name: CTU MRS Simulation
   url: https://github.com/ctu-mrs/simulation
   notes: Based on Gazebo; See also invited talk by Tomáš Báča
+  
+- name: Agilicious
+  url: https://github.com/uzh-rpg/agilicious
+  notes: Based on Gazebo; See also invited talk by Davide Scaramuzza
 
 - name: FlightGoggles
   url: https://flightgoggles.mit.edu/
