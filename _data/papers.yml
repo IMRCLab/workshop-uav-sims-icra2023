@@ -4,6 +4,7 @@
 - title: "RotorPy: A Python-based Multirotor Simulator with Aerodynamics for Education and Research"
   authors: "Spencer Folk, James Paulos and Vijay Kumar"
   pdf:  RS4UAVs_paper_3.pdf
+  poster: RS4UAVs_paper_3.pdf
 - title: "MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs"
   authors: "Fanze Kong, Xiyuan Liu, Benxu Tang, Jiarong Lin, Yunfan Ren, Yixi Cai, Fangcheng Zhu, Nan Chen and Fu Zhang"
   pdf:  RS4UAVs_paper_4.pdf
