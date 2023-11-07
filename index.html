@@ -1,0 +1,1561 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Role of Robotics Simulators for Unmanned Aerial Vehicles</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/academicons.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.solid.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.brands.min.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  
+          // Get "navbar-burger" element
+          const $myNavbarBurger = document.querySelector('.navbar-burger');
+          const $myNavbar = document.querySelector('.navbar-menu');
+  
+          // do not expand menu if JS is available
+          $myNavbarBurger.classList.remove('is-active');
+          $myNavbar.classList.remove('is-active');
+  
+          $myNavbarBurger.addEventListener('click', () => {
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            $myNavbarBurger.classList.toggle('is-active');
+            $myNavbar.classList.toggle('is-active');
+          });
+  
+          // Get all "navbar-item" elements
+          const $navbarItems = Array.prototype.slice.call(document.querySelectorAll('.navbar-item'), 0);
+          if ($navbarItems.length > 0) {
+  
+            // Add a click event on each of them
+            $navbarItems.forEach( el => {
+              el.addEventListener('click', () => {
+                // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                $myNavbarBurger.classList.remove('is-active');
+                $myNavbar.classList.remove('is-active');
+              });
+            });
+          }
+  
+        });
+      </script>
+
+  </head>
+  <body>
+      <!-- Navigation bar -->
+  <nav class="navbar is-dark" id="home">
+    <div class="navbar-brand">
+      <div class="navbar-burger burger is-active" data-target="myNavbar">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="myNavbar" class="navbar-menu is-active">
+      <div class="navbar-end">
+        
+        <a class="navbar-item  is-active " href="/">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-info"></i>
+          </span>
+          
+          <span>About </span>
+        </a>
+        
+        <a class="navbar-item " href="#schedule">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-calendar-days"></i>
+          </span>
+          
+          <span>Schedule </span>
+        </a>
+        
+        <a class="navbar-item " href="#speakers">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-microphone"></i>
+          </span>
+          
+          <span>Invited speakers </span>
+        </a>
+        
+        <a class="navbar-item " href="#papers">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-book"></i>
+          </span>
+          
+          <span>Papers </span>
+        </a>
+        
+        <a class="navbar-item " href="#sims">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-laptop-code"></i>
+          </span>
+          
+          <span>Simulators </span>
+        </a>
+        
+        <a class="navbar-item " href="#team">
+          
+          <span class="icon">
+            <i class=" fa-solid fa-people-group"></i>
+          </span>
+          
+          <span>Team </span>
+        </a>
+        
+      </div>
+    </div>
+  </nav>
+
+    <div class="content">
+        <section class="section" id="about">
+    <div class="section-heading">
+        <h1 class="title is-1">The Role of Robotics Simulators for Unmanned Aerial Vehicles</h1>
+        <h2 class="subtitle is-2">Half-Day Workshop at ICRA 2023</h2>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-half is-4-desktop">
+        <div class="content">
+          <h2 class="subtitle is-6">Objective</h2>
+          <p>
+          The workshop aims to provide the participants with the knowledge and experience of researchers who have struggled to find, customize, or design a robotic simulator for their own purposes or specific application. The focus is on aerial vehicles, especially multi-rotor aircraft, where we expect simulation solutions to be of continued importance for both research and industrial applications.
+          Simulating Unmanned Aerial Vehicles (UAVs) is a specialized task, because of aerodynamic interactions (with the environment or other robots), the fast operating speed compared to other robots (e.g., mobile, legged), and the potentially large number of interacting robots in three dimensions (e.g., swarms of delivery drones).
+          </p>
+        </div>
+      </div>
+
+      <div class="column is-half is-4-desktop">
+
+        <div class="content paper">
+
+          <!--
+          <h2 class="subtitle is-6">News</h2>
+
+          <ul>
+            <li>
+              <span class="title">Objectives, Topics Covered, Important Dates, Call for Papers now available</span>
+              <span class="note">20/01/2023</span>
+            </li>
+            <li>
+              <span class="title">Workshop <a href="https://www.icra2023.org/programme/workshops-tutorials">accepted to ICRA'23</a>, taking place on June 2nd, 2023</span>
+              <span class="note">21/12/2022</span>
+            </li>
+            <li>
+              <span class="title">Initial Webpage.</span>
+              <span class="note">23/09/2022</span>
+            </li>
+          </ul>
+          -->
+
+          <h2 class="subtitle is-6">Important Dates</h2>
+
+          <ul>
+            <li>
+              <s><span class="title">Extended abstract submission deadline: March 20, 2023 <p style="color:red;display:inline">April 3, 2023 23:59 (Pacific Time).</p></s>
+              </span>
+            </li>
+            <li>
+              <s>Notification to authors: April 10, 2023 (Pacific Time)</s>
+            </li>
+            <li>
+              <s>Camera-ready paper: May 5, 2023 (Pacific Time)</s>
+            </li>
+            <li>
+              <s>Workshop day: June 2, 2023. Last day of ICRA'23. Half-day afternoon workshop (14:00-18:00). Location: South Gallery Room 25</s>
+            </li>
+          </ul>
+
+        </div>
+
+        <p class="buttons">
+          <a href="mailto:rs4uavs@googlegroups.com" class="button is-dark">
+            <span class="icon">
+              <i class="fas fa-at"></i>
+            </span>
+            <span>E-Mail</span>
+          </a>
+        </p>
+
+        <p class="buttons">
+          <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c" class="button is-dark">
+            <span class="icon">
+              <i class="fas fa-video"></i>
+            </span>
+            <span>Recorded Workshop</span>
+          </a>
+        </p>
+
+        <p class="buttons">
+          <a href="https://arxiv.org/abs/2311.02296" class="button is-dark">
+            <span class="icon">
+              <i class="fa-solid fa-book"></i>
+            </span>
+            <span>Survey Paper</span>
+          </a>
+        </p>
+
+        <!--
+        <a href="https://easychair.org/conferences/?conf=rs4uavs" class="button is-dark">
+          <span class="icon">
+            <i class="fas fa-file-export"></i>
+          </span>
+          <span>Submission</span>
+        </a>
+      -->
+
+        <!--
+        <div class="content paper">
+          <h2 class="subtitle is-6">Questions</h2>
+            If you have any questions please <a href="mailto: rs4uavs@googlegroups.com">contact us</a>.
+        </div>
+        -->
+
+      </div>
+    </div>
+</section>
+
+<!--
+<section class="section" id="dates">
+  <div class="section-heading">
+      <h2 class="title is-2">Important Dates</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>
+          <span class="title">Extended abstract submission deadline: <p style="color:red;display:inline">March 20, 2023.</p>
+          </span>
+        </li>
+        <li>
+          Notification to authors: April 10, 2023
+        </li>
+        <li>
+          Camera-ready paper: April 17, 2023
+        </li>
+        <li>
+          <span class="title"<b>Workshop day: June 2, 2023. Last day of ICRA'23. Half-day workshop.</b></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- <section class="section" id="CFP">
+  <div class="section-heading">
+      <h2 class="title is-2">Call for Papers</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>We invite the submission of extended abstracts in line with the workshop's objectives with a maximum of 4 pages in the ICRA format,
+          encouraging and prioritizing submissions of new ideas.
+          Authors of the accepted papers will be invited to present their work during the poster session.</li>
+        <li>Every paper will be reviewed by at least two peers. The selection of accepted papers will be done by the organizing committee, based on
+          the reviews.</li>
+
+        <li><i>The deadline for submission has been extended by two weeks to April 3rd. Check out <a href="#about">the important deadlines</a></i></li>
+      </ul>
+      <center><h3><a href="https://easychair.org/conferences/?conf=rs4uavs">Submission website (EasyChair)</a></h3></center>
+    </div>
+  </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Topics Covered</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        Participants are encouraged to submit their recent work on simulations of aerial robots involving, but not limited to, the following aspects.
+        <br></br>
+        <li> Application-specific challenges for UAV simulation: mapping, below-canopy navigation, smart agriculture, racing, etc.</li>
+        <li>Aerial physical interaction simulation: actuated, under-actuated and passive mechanisms, aerial grasping,  human-robot interaction, etc.</li>
+        <li>Simulation/Modeling of Aerodynamic effects</li>
+        <li>Case study of a researcher or group’s technical work in the context of Robotic Simulators for Aerial Robots and how their work fits into the broader discussion provided by the Workshop topics</li>
+        <li>Control methods and benchmarks (simulation vs reality), parameters and model tuning,, robustness in edge conditions</li>
+        <li>Digital twins, operator instruction, training and operation support, transfer from simulation to reality (Sim-to-Real)</li>
+        <li>Data-driven methods</li>
+        <li>Drone technology, with particular emphasis on the importance of simulation before deployment</li>
+        <li>Hybrid simulation and hardware-in-the-loop simulation techniques</li>
+        <li>Mission and motion planning</li>
+        <li>Manipulation, path planning, navigation in dynamic and cluttered environments</li>
+        <li>Methods supporting fast simulation and real-time simulation solutions</li>
+        <li>Simulation of Multi-agent systems: cooperative manipulation, formation, communication handling, swarms, etc.,</li>
+        <li>Multi-domain simulations</li>
+        <li>Robotic toolboxes</li>
+        <li>Verification and validation</li>
+        <li>Robot behavior adaptation and personalization</li>
+        <li>State estimation, localization, mapping, perception</li>
+      </ul>
+    </div>
+  </div>
+</section> -->
+
+<section class="section" id="schedule">
+  <div class="section-heading">
+      <h2 class="title is-2">Schedule</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>
+          13:50 - 14:00: Introduction and overview
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=475s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+        
+      </ul>
+      <b>Session 1: Multi-robot simulation for learning and Interacting</b>
+      <ul>
+        <li>
+          14:00 Tomáš Báča - Abstractions and Simulations as the Backbone of Reproducible Research
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=1114s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+        <li>
+          14:30 Angela Schoellig - Safe-control-gym and gym-pybullet-drones: Simulation and benchmarking tools for safe learning-based control and reinforcement learning
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=3166s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+      </ul>
+      <b>Poster Session + Coffee break</b>
+      <ul>
+        <li>15:00 - 16:00 Poster session</li>
+        <li>15:30 - 16:00 Refreshments</li>
+      </ul>
+      <b>Session 2: Software-in-the-loop and Realistic vision-based simulation</b>
+      <ul>
+        <li>
+          16:00 Jaeyoung Lim - Simulating Workflows for Aerial Robots with Software-In-The-Loop
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=5674s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+        </li>
+        <li>
+          16:30 Davide Scaramuzza and Leonard Bauersfeld - Vision based Agile Flight, from simulation to reality
+          <br>
+          [
+            <a href="https://www.youtube.com/watch?v=MjqBZOVEL4c&t=7416s"><span class="icon"><i class="fas fa-video"></i></span></a>
+          ]
+        </li>
+      </ul>
+      <b>Session 3: Breakout & Discussion</b>
+      <ul>
+        <li>17:00 Breakout sessions</li>
+        <li>17:15 Presentation session + Open discussion</li>
+        <li>17:45 Closing Remarks</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-heading" id="speakers">
+    <h2 class="title is-3">Invited Speakers</h2>
+  </div>
+
+  <!--div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>TBD</li>
+      </ul>
+    </div>
+  </div-->
+
+  <div class="container">
+    <div class="team tile is-ancestor is-flex-wrap">
+        
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/davide_gray.jpg" alt="Davide Scaramuzza">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Davide Scaramuzza
+        </p>
+        <p class="venue">
+          University of Zurich
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Vision based Agile Flight, from simulation to reality"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/angela3.jpg" alt="Angela Schoellig">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Angela Schoellig
+        </p>
+        <p class="venue">
+          Technical University of Munich
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Safe-control-gym and gym-pybullet-drones: Simulation and benchmarking tools for safe learning-based control and reinforcement learning"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/tomas_baca.jpg" alt="Tomáš Báča">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Tomáš Báča
+        </p>
+        <p class="venue">
+          Czech Technical University in Prague
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Abstractions and Simulations as the Backbone of Reproducible Research"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/jaoyounglim.jpg" alt="Jaeyoung Lim">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Jaeyoung Lim
+        </p>
+        <p class="venue">
+          PX4 Core Developer & Ph.D. Student, ETH Zurich
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Simulating Workflows for Aerial Robots with Software-In-The-Loop"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+    </div>
+  </div>
+
+  <div class="section-heading" id="papers">
+    <h2 class="title is-3">Contributed Papers</h2>
+  </div>
+
+  <div class="container">
+    <ul class="paper">
+
+        
+            <li>
+  <span class="title">
+    Enhancing Power Line Segmentation for UAV Inspection utilizing Synthetic Data,
+  </span>
+  <span class="author">
+    Georgios Kalitsios, Vasileios Mygdalis and Ioannis Pitas
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_2.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    RotorPy: A Python-based Multirotor Simulator with Aerodynamics for Education and Research,
+  </span>
+  <span class="author">
+    Spencer Folk, James Paulos and Vijay Kumar
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_3.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_3.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    MARSIM: A light-weight point-realistic simulator for LiDAR-based UAVs,
+  </span>
+  <span class="author">
+    Fanze Kong, Xiyuan Liu, Benxu Tang, Jiarong Lin, Yunfan Ren, Yixi Cai, Fangcheng Zhu, Nan Chen and Fu Zhang
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_4.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_4.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Sensitivity Approach for Prioritizing Unmanned Aerial Vehicles Simulator Design,
+  </span>
+  <span class="author">
+    Mohamad Chehadeh, Igor Boiko and Yahya Zweiri
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_5.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Flymation: Interactive Animation for Flying Robots,
+  </span>
+  <span class="author">
+    Yunlong Song and Davide Scaramuzza
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_6.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Introducing Noise for AirSim's 3D Lidar Sensor to Reduce the Sim2real Gap,
+  </span>
+  <span class="author">
+    David Tejero, Marco A. Montes-Grova, Jose A. Alvarez, Francisco J. Perez-Grau and Antidio Viguria
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_7.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Potato: A Data-Oriented Programming 3D Simulator for Large-Scale Heterogeneous Swarm Robotics,
+  </span>
+  <span class="author">
+    Jinjie Li, Liang Han, Haoyang Yu, Zhaotian Wang, Pengzhi Yang, Ziwei Yan and Zhang Ren
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_8.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_8.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    From Perspective View to Bird's Eye View in Agricultural Environments,
+  </span>
+  <span class="author">
+    Simon Rumley, Anastasia Thoma, Paul Beardsley, Lucas Teixeira and Margarita Chli
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_9.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Survey, Selection, and Integration of Aerial Vehicle Simulators,
+  </span>
+  <span class="author">
+    Cora Dimmig and Marin Kobilarov
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_10.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_10.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    CrazyChoir: A ROS 2 Toolbox for Simulations and Experiments on Swarms of Cooperating Crazyflies,
+  </span>
+  <span class="author">
+    Lorenzo Pichierri, Andrea Testa and Giuseppe Notarstefano
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_11.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Aerial Gym – Isaac Gym Simulator for Aerial Robots,
+  </span>
+  <span class="author">
+    Mihir Kulkarni, Theodor Johannes Line Forgaard and Kostas Alexis
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_12.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_12.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Simulation-Guided Testing for Autonomous Aerial Robotics Applications,
+  </span>
+  <span class="author">
+    Rafael Perez-Segui, Pedro Arias-Perez, Javier Melero-Deza, David Perez-Saura, Miguel Fernandez-Cortizas and Pascual Campoy
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_13.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_13.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Sim-to-real transfer of UAV swarms using digital twins,
+  </span>
+  <span class="author">
+    Lucio Salinas, Georgios Tzoumas, Lenka Pitonakova and Sabine Hauert
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_15.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    QuadSwarm: A Modular Multi-Quadrotor Simulator for Deep Reinforcement Learning with Direct Thrust Control,
+  </span>
+  <span class="author">
+    Zhehui Huang, Sumeet Batra, Tao Chen, Rahul Krupani, Tushar Kumar, Artem Molchanov, Aleksei Petrenko, James Preiss, Zhaojing Yang and Gaurav Sukhatme
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_16.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_16.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    Unity3D and Robot Operating System applied to the development of a multi-UAV strategy to identify oil spills around offshore platforms,
+  </span>
+  <span class="author">
+    Kelen Vivaldini and Tatiana Pazelli
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_17.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+  <a href="papers/RS4UAVs_poster_17.pdf"><span class="icon"><i class="fas fa-file-powerpoint"></i></span></a>
+  
+
+  ]
+</li>
+
+            <li>
+  <span class="title">
+    A Simulator for Fully-Actuated UAVs,
+  </span>
+  <span class="author">
+    Azarakhsh Keipour, Mohammadreza Mousaei and Sebastian Scherer
+  <br>
+  [
+  
+  <a href="papers/RS4UAVs_paper_18.pdf"><span class="icon"><i class="fas fa-file-pdf"></i></span></a>
+  
+  
+
+  ]
+</li>
+
+
+    </ul>
+  </div>
+
+  <div class="section-heading" id="sims">
+    <h2 class="title is-3">Simulators</h2>
+  </div>
+
+  <div class="container">
+    <ul class="paper">
+
+        
+            <li>
+  <span class="title">
+    <a href="https://github.com/ntnu-arl/aerial_gym_simulator">Aerial Gym</a>
+  </span>
+  <span class="note">
+    Based on NVIDIA Isaac Gym; See also <a href="papers/RS4UAVs_paper_12.pdf">paper 12</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/aerostack2/aerostack2">Aerostack2</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_13.pdf">paper 13</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://microsoft.github.io/AirSim/">AirSim</a>
+  </span>
+  <span class="note">
+    based on Unreal Engine; <a href="papers/RS4UAVs_paper_7.pdf">paper 7</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/keipour/aircraft-simulator-matlab">ARCAD</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_18.pdf">paper 18</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/ctu-mrs/simulation">CTU MRS Simulation</a>
+  </span>
+  <span class="note">
+    Based on Gazebo; See also invited talk by Tomáš Báča
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/uzh-rpg/agilicious">Agilicious</a>
+  </span>
+  <span class="note">
+    Based on Gazebo; See also invited talk by Davide Scaramuzza
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://flightgoggles.mit.edu/">FlightGoggles</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://uzh-rpg.github.io/flightmare/">Flightmare</a>
+  </span>
+  <span class="note">
+    See also invited talk by Davide Scaramuzza; See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://gazebosim.org">Gazebo</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://utiasdsl.github.io/gym-pybullet-drones/">Gym-PyBullet-Drones</a>
+  </span>
+  <span class="note">
+    See also invited talk by Angela Schoellig; See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/hku-mars/MARSIM">MARSIM</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_4.pdf">paper 4</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="">Potato</a>
+  </span>
+  <span class="note">
+    GPU-based; See also <a href="papers/RS4UAVs_paper_8.pdf">paper 8</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/Zhehui-Huang/quad-swarm-rl">QuadSwarm</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_16.pdf">paper 16</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/spencerfolk/rotorpy">RotorPy</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_3.pdf">paper 3</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://github.com/ethz-asl/rotors_simulator">RotorS</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://unity.com/Paper 4">Unity 3D</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_2.pdf">paper 2</a>, <a href="papers/RS4UAVs_paper_17.pdf">paper 17</a>
+</li>
+
+            <li>
+  <span class="title">
+    <a href="https://cyberbotics.com/">Webots</a>
+  </span>
+  <span class="note">
+    See also <a href="papers/RS4UAVs_paper_10.pdf">paper 10</a>
+</li>
+
+
+    </ul>
+  </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Plans to encourage interaction among participants</h2>
+  </div>
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      A set of actions are planned to solicit broad and active participation in the workshop, including:
+      <ul>
+        <li>Discussion poster of contributed abstracts</li>
+        <li>Creation of online pools among both in person and remote participants to identify top discussions themes during round tables and breaks</li>
+        <li>Breakout sessions and a round table (i.e., presentation session followed by an open discussion) with the speakers and the participants</li>
+      </ul>
+    </div>
+  </div>
+
+</section>
+
+<!--
+<section class="section" id="speakers">
+  <div class="section-heading">
+    <h2 class="title is-2">Invited Speakers</h2>
+</div>
+  <div class="columns is-centered">
+    <div class="content paper">
+      <ul>
+        <li>TBD</li>
+      </ul>
+    </div>
+  </div>
+  -->
+<!--div class="container">
+  <div class="team tile is-ancestor is-flex-wrap">
+      
+          <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/davide_gray.jpg" alt="Davide Scaramuzza">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Davide Scaramuzza
+        </p>
+        <p class="venue">
+          University of Zurich
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Vision based Agile Flight, from simulation to reality"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+          <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/angela3.jpg" alt="Angela Schoellig">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Angela Schoellig
+        </p>
+        <p class="venue">
+          Technical University of Munich
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Safe-control-gym and gym-pybullet-drones: Simulation and benchmarking tools for safe learning-based control and reinforcement learning"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+          <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/tomas_baca.jpg" alt="Tomáš Báča">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Tomáš Báča
+        </p>
+        <p class="venue">
+          Czech Technical University in Prague
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Abstractions and Simulations as the Backbone of Reproducible Research"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+          <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/jaoyounglim.jpg" alt="Jaeyoung Lim">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Jaeyoung Lim
+        </p>
+        <p class="venue">
+          PX4 Core Developer & Ph.D. Student, ETH Zurich
+        </p>
+        
+        <p class="talk">
+           <b>Talk:</b> "Simulating Workflows for Aerial Robots with Software-In-The-Loop"
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+  </div>
+</div-->
+<!--
+</section> -->
+<!--
+<section class="section" id="plan-participants">
+  <div class="section-heading">
+    <h2 class="title is-2">Plans to encourage interaction among participants</h2>
+
+    <div class="columns is-centered">
+      <div class="content paper">
+        <ul>
+          A set of actions are planned to solicit broad and active participation in the workshop, including:
+          <br></br>
+          <li>Discussion poster of contributed abstracts</li>
+          <li>Creation of online pools among both in person and remote participants to identify top discussions themes during round tables and breaks</li>
+          <li>Breakout sessions and a round table (i.e., presentation session followed by an open discussion) with the speakers and the participants</li>
+        </ul>
+      </div>
+    </div>
+</section> -->
+
+
+<section class="section" id="team">
+  <div class="section-heading">
+      <h2 class="title is-2">Team</h2>
+  </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Organizing Committee</h2>
+  </div>
+
+  <div class="container">
+      <div class="team tile is-ancestor is-flex-wrap">
+          
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/knmcguire.jpg" alt="Kimberly McGuire">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Kimberly McGuire
+        </p>
+        <p class="venue">
+          Bitcraze A.B.
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/giuseppe_silano.jpg" alt="Giuseppe Silano">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Giuseppe Silano
+        </p>
+        <p class="venue">
+          CTU Prague
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/chiara_gabellieri_.jpg" alt="Chiara Gabellieri">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Chiara Gabellieri
+        </p>
+        <p class="venue">
+          TU Twente
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/wolfgang_hoenig.jpg" alt="Wolfgang Hönig">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Wolfgang Hönig
+        </p>
+        <p class="venue">
+          TU Berlin
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+      </div>
+  </div>
+
+  <div class="section-heading">
+    <h2 class="title is-3">Steering Committee</h2>
+  </div>
+
+  <div class="container">
+      <div class="team tile is-ancestor is-flex-wrap">
+          
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/franchia5d.jpg" alt="Antonio Franchi">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Antonio Franchi
+        </p>
+        <p class="venue">
+          TU Twente, LAAS-CNRS, University of Sapienza in Rome
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/martin_saska.jpg" alt="Martin Saska">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Martin Saska
+        </p>
+        <p class="venue">
+          Czech Technical University in Prague
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/antonelli_pic5.png" alt="Gianluca Antonelli">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Gianluca Antonelli
+        </p>
+        <p class="venue">
+          University of Cassino and Southern Lazio
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/LippielloBio_hrez.jpg" alt="Vincenzo Lippiello">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Vincenzo Lippiello
+        </p>
+        <p class="venue">
+          University of Naples Federico II
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/gaurav_ sukhatme.jpg" alt="Gaurav Sukhatme">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Gaurav Sukhatme
+        </p>
+        <p class="venue">
+          University of Southern California
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+              <div class="tile is-parent">
+    <div class="tile is-child card">
+      
+      <div class="card-image has-text-centered">
+        <figure class="image is-inline-block">
+          <img src="assets/img/stefano_stramigioli.png" alt="Stefano Stramigioli">
+        </figure>
+      </div>
+      
+      <div class="card-content paper">
+        <p class="title">
+          Stefano Stramigioli
+        </p>
+        <p class="venue">
+          TU Twente
+        </p>
+        
+      </div>
+      <footer class="card-footer">
+        
+        
+        
+      </footer>
+    </div>
+</div>
+
+      </div>
+  </div>
+
+  <div class="section-heading">
+      <h2 class="title is-3">Support</h2>
+  </div>
+
+  <div class="container">
+    <div class="team tile is-ancestor is-flex-wrap">
+        
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://aerial-core.eu">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/aerial-core_logo2.png" alt="Aerial Core">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://www.comp4drones.eu">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/LogoC4D.png" alt="Comp4Drones">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://aerostream.fer.hr/aerostream">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/aeroSTREAM.png" alt="AeroSTREAM">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://www.ram.eemcs.utwente.nl/research/projects/flyflic">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/Fliflic_logo.png" alt="FlyFlic">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://www.dfg.de/en/">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/german_research_foundation.png" alt="German Research Foundation">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://www.bitcraze.io/">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/Bitcraze_logo.png" alt="Bitcraze AB">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://www.dronecode.org/">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/dronecode_logo_default.png" alt="DroneCode Foundation">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+
+  <!-- <div class="columns is-centered">
+    <div class="content paper">
+      <center>
+      <ul>
+        <a target="_blank" href="https://aerial-core.eu/">
+          <img src="assets/img/projects_logo/aerial-core_logo2.png" style="max-width:12.5%;float:left;border:10px solid white" alt="Aerial-Core logo">
+				</a>
+        <a target="_blank" href="https://www.comp4drones.eu/">
+          <img src="assets/img/projects_logo/LogoC4D.png" style="max-width:15%;float:left;border:10px solid white" alt="Comp4Drones logo">
+				</a>
+        <a target="_blank" href="https://aerostream.fer.hr/aerostream">
+          <img src="assets/img/projects_logo/aeroSTREAM.png" style="max-width:25%;float:left;border:10px solid white" alt="AeroSTREAM logo">
+				</a>
+        <a target="_blank" href="https://www.ram.eemcs.utwente.nl/research/projects/flyflic">
+          <img src="assets/img/projects_logo/Fliflic_logo.png" style="max-width:20%;float:left;border:10px solid white" alt="FlyFlic logo">
+				</a>
+        <a target="_blank" href="https://www.dfg.de/en/">
+          <img src="assets/img/projects_logo/german_research_foundation.png" style="max-width:25%;float:left;border:10px solid white" alt="German Research Foundation">
+				</a>
+      </ul>
+      </center>
+    </div>
+  </div> -->
+
+  <div class="section-heading">
+      <h2 class="title is-3">Endorsement</h2>
+  </div>
+
+  <div class="container">
+    <div class="team tile is-ancestor is-flex-wrap">
+        
+            <div class="tile is-parent">
+    <div class="tile is-child card equal-height">
+      <div class="card-image">
+        <a href="https://ieee-aerialrobotics-uavs.org/">
+          <figure class="myimg">
+            <img src="assets/img/projects_logo/technical_committee_aruav.jpeg" alt="ARUAV TC">
+          </figure>
+        </a>
+      </div>
+    </div>
+</div>
+
+    </div>
+  </div>
+<!--
+
+  <div class="columns is-centered">
+    <div class="content paper">
+      <center>
+        <a target="_blank" href="https://ieee-aerialrobotics-uavs.org/">
+          <img src="assets/img/projects_logo/technical_committee_aruav.jpeg" style="max-width:125%;float:left;border:10px solid white" alt="ARUAV TC logo">
+        </a>
+      </center>
+    </div>
+  </div> -->
+</section>
+
+    </div>
+  </body>
+</html>
